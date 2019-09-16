@@ -1,0 +1,30 @@
+# TODO does not work on windows, needs provisioner and pre_creates ported
+# ---
+# driver:
+#   name: vagrant
+#   synced_folders:
+#     - ["./results", "/tmp/results"] # Mount local ./results to /tmp/results in Kitchen VM
+
+# provisioner:
+#   name: shell
+#   script: 'test/scripts/provisioner.sh' # todo - make work on windows
+
+# verifier:
+#   name: inspec
+
+# platforms:
+#   - name: windows-server-2016-standard
+
+# lifecycle:
+#   pre_create:
+#     # Export archive as a tar (removes need to install hab and pull/transfer keys)
+#     # This is done in the studio since export as tar is only supported on Linux
+#     - hab studio run 'cd results && source last_build.env && hab pkg export tar $pkg_artifact && mv $pkg_origin-$pkg_name-$pkg_version-$pkg_release.tar.gz hab_artifact.tar.gz' #todo - make work on windows
+#     # - hab studio run 'cd results && hab pkg export tar jvdemo/inspec-cis-centos7-demo --channel stable && mv jvdemo-inspec-cis-centos7-demo* inspec_artifact.tar.gz'
+
+# suites:
+#   - name: default
+#     verifier:
+#       inspec_tests:
+#         - test/integration/default
+#     attributes:
