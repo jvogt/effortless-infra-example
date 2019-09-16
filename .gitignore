@@ -19,7 +19,7 @@ bin/*
 # Chef
 Berksfile.lock
 .zero-knife.rb
-Policyfile.lock.json
+*.lock.json
 
 # Habitat
 results/*
