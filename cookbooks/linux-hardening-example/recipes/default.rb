@@ -1,2 +1,2 @@
 include_recipe 'os-hardening::default'
-include_recipe 'hardening::remediation'
+include_recipe 'linux-hardening-example::remediation'
